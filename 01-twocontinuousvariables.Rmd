@@ -1,0 +1,12 @@
+# Two Continuous Variables 
+
+As mentioned earlier, the application by default selects two continuous variables for correlation, Gestational age (weeks) on X axis and Birth Weight (g) on Y axis. The other options, stratification variable one, stratification variable two, show dots, log scale for x axis, log scale for y axis, and confidence interval, allow the user to modify the plots. For now, let us keep all the options to default and see the resultant plot.
+
+## Basic correlation plot
+
+When all the options are left to default and are submitted, the following correlation plot is generated.
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/_pictures/Basic-Correlation.png")
+```
+

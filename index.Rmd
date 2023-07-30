@@ -1,6 +1,6 @@
 --- 
-title: "A Minimal Book Example"
-author: "John Doe"
+title: "dbRUSPClinical - User Guide"
+author: "Hari Naga Sai Kiran Suryadevara"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -17,44 +17,19 @@ github-repo: rstudio/bookdown-demo
 
 # About
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
+dbRUSPClinical is a web application that is built using R shiny. The objective of this application is to allow the user to visualize the newborn clinical data. This application allows the user to find the relation between any two variables of the newborn clinical dataset. 
 
 ## Usage 
 
-Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
+The dbRUSPClinical application has two pages. One is the About page, which clearly explains the need of the dbRUSPClinical web application. The other page is the correlation page, which allows the user to select the variables for correlation.
 
-Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
+## Correlation
 
-The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
+Here is a glimpse of the correlation page.
 
-## Render book
-
-You can render the HTML version of this example book without changing anything:
-
-1. Find the **Build** pane in the RStudio IDE, and
-
-1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
-
-Or build the book from the R console:
-
-```{r, eval=FALSE}
-bookdown::render_book()
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/_pictures/Correlation-intro.png")
 ```
 
-To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
+By default, two continuous variables, Gestational age (weeks) on X axis and Birth Weight (g) on Y axis are preselected when the application starts running. This can be seen from the figure above that Gestational age (weeks) is selected as variable one and Birth Weight (g) is selected as variable two. There are other fields in the page such as the stratification variable one and stratification variable two. These two variables allow the user to select categorical variables. This allows the data to be divided into different groups based on the unique values of these categorical variables and these grouped data points are shown separately in the plots. This is shown clearly later in this document. For now, only the variable one and variable two are selected. The other options are check boxes that allow the user to modify the plots to show or hide the data points, to change the scale for X and Y axis, and to include or exclude the confidence interval. All these options are pertaining to the plots generated for two continuous variables. So, by default the correlation page of the dbRUSPClinical application will show you the options relevant for plots between two continuous variables. These options will vary if other types of variable combinations are selected. Let us explore the plot results of each variable combination in the next chapters.
 
-## Preview book
-
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
-
-```{r eval=FALSE}
-bookdown::serve_book()
-```
-
-
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
