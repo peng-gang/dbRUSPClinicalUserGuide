@@ -7,6 +7,9 @@ usage
 correlation
 two-continuous-variables
 basic-correlation-plot
+correlation-plots-with-one-stratification-variable
+correlation-plots-with-two-stratification-variables
+technical-details
 cross
 chapters-and-sub-chapters
 captioned-figures-and-tables
