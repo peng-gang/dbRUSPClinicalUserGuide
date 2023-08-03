@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Hari Naga Sai Kiran Suryadevara" />
 
 
-<meta name="date" content="2023-08-02" />
+<meta name="date" content="2023-08-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -226,38 +226,38 @@ div.csl-indent {
 <div id="basic-correlation-plot" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Basic correlation plot<a href="two-continuous-variables.html#basic-correlation-plot" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>When all the options are left to default and are submitted, the following correlation plot is generated.</p>
-<p><img src="_pictures/Basic-Correlation.png" width="1246" /></p>
+<p><img src="pictures/Basic-Correlation.png" width="1246" /></p>
 <p>The following options were selected for the above plot and all the check boxes were unchecked.</p>
-<p><img src="_pictures/Variables-Selected.png" width="527" /></p>
+<p><img src="pictures/Variables-Selected.png" width="527" /></p>
 <p>When all the check boxes are selected as below,</p>
-<p><img src="_pictures/Options-Selected.png" width="318" /></p>
+<p><img src="pictures/Options-Selected.png" width="318" /></p>
 <p>The plot will be modified as,</p>
-<p><img src="_pictures/Basic-Correlation-Options.png" width="1246" /></p>
+<p><img src="pictures/Basic-Correlation-Options.png" width="1246" /></p>
 <p>In the above plot, both the axes have been changed to logarithmic scale, data points and confidence interval were added.</p>
 <p>You can also notice that two slide bars appear on the side panel to help the user to adjust the height and width of the plots.</p>
-<p><img src="_pictures/Plot-Adjust.png" width="525" /></p>
+<p><img src="pictures/Plot-Adjust.png" width="525" /></p>
 <p>Now that we have seen a basic correlation between two continuous variables, let us use stratification variables to see how the plots change.</p>
 </div>
 <div id="correlation-plots-with-one-stratification-variable" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Correlation plots with one stratification variable<a href="two-continuous-variables.html#correlation-plots-with-one-stratification-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The user has the option to divide the entire dataset based on a categorical variable and view the correlation between selected variables for each category. For example, the user can select Sex as the stratification variable to see the correlation between selected variables for each gender. The selected options would be as follows,</p>
-<p><img src="_pictures/Str-Options-Selected.png" width="527" /></p>
+<p><img src="pictures/Str-Options-Selected.png" width="527" /></p>
 <p>When the user selects the options as shown in the above picture, a basic correlation plot is generated as seen before along with a new plot depicting correlation between the selected variables for each category of the selected stratification variable, which is Sex in this example. The new plot would be as follows,</p>
-<p><img src="_pictures/Correlation-One-Str.png" width="1243" /></p>
+<p><img src="pictures/Correlation-One-Str.png" width="1243" /></p>
 <p>We can notice in the above plot that the entire data is divided based on gender and the correlation between selected variables is plotted seperately for each gender. The same set of plots are generated when the user selects a stratification variable two and selects nothing for stratification variable one. This means, the application generates a basic correlation plot and a correlation plot showing distinctive correlation lines for each category of the selected stratification variable whenever the user selects any one stratification variable, i.e., either stratification variable one or stratification variable two along with the variables for correlation.</p>
 </div>
 <div id="correlation-plots-with-two-stratification-variables" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Correlation plots with two stratification variables<a href="two-continuous-variables.html#correlation-plots-with-two-stratification-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Finally the user has the option to select two stratification variables. When the user does select both of them, a basic correlation plot between the selected variables, two plots showing correlation between the selected variables separately for each category of both the stratification variables (One plot for each stratification variable) and two plots showing correlation between the selected variables where in each plot the data is stratified using both the selected stratification variables are shown. For example, let us consider that the user selects Sex as stratification variable one and Ethnicity(major) as stratification variable two as below,</p>
-<p><img src="_pictures/Two-Str-Options-Selected.png" width="523" /></p>
+<p><img src="pictures/Two-Str-Options-Selected.png" width="523" /></p>
 <p>The following plots are generated apart from the basic correlation plot.</p>
-<p><img src="_pictures/Correlation-One-Str.png" width="1243" />
+<p><img src="pictures/Correlation-One-Str.png" width="1243" />
 Correlation lines shown separately for each Sex.</p>
-<p><img src="_pictures/Correlation-One-Str2.png" width="1244" />
+<p><img src="pictures/Correlation-One-Str2.png" width="1244" />
 Correlation lines shown separately for each Ethnicity(major).</p>
-<p><img src="_pictures/Correlation-Two-Str.png" width="1244" />
+<p><img src="pictures/Correlation-Two-Str.png" width="1244" />
 Data is wrapped by Ethnicity(major) and correlation lines shown separately for each Sex.</p>
-<p><img src="_pictures/Correlation-Two-Str2.png" width="1244" />
+<p><img src="pictures/Correlation-Two-Str2.png" width="1244" />
 Data is wrapped by Sex and correlation lines shown separately for each Ethnicity(major).</p>
 <p>Now that we have seen different kinds of plots the application generates when a user selects two continuous variables and different stratification variables, let us look into some technical details.</p>
 </div>

@@ -28,7 +28,7 @@ The dbRUSPClinical application has two pages. One is the About page, which clear
 Here is a glimpse of the correlation page.
 
 ```{r, echo=FALSE}
-knitr::include_graphics("~/dbRUSPClinicalUserGuide/_pictures/Correlation-intro.png")
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Correlation-intro.png")
 ```
 
 By default, two continuous variables, Gestational age (weeks) on X axis and Birth Weight (g) on Y axis are preselected when the application starts running. This can be seen from the figure above that Gestational age (weeks) is selected as variable one and Birth Weight (g) is selected as variable two. There are other fields in the page such as the stratification variable one and stratification variable two. These two variables allow the user to select categorical variables. This allows the data to be divided into different groups based on the unique values of these categorical variables and these grouped data points are shown separately in the plots. This is shown clearly later in this document. For now, only the variable one and variable two are selected. The other options are check boxes that allow the user to modify the plots to show or hide the data points, to change the scale for X and Y axis, and to include or exclude the confidence interval. All these options are pertaining to the plots generated for two continuous variables. So, by default the correlation page of the dbRUSPClinical application will show you the options relevant for plots between two continuous variables. These options will vary if other types of variable combinations are selected. Let us explore the plot results of each variable combination in the next chapters.
