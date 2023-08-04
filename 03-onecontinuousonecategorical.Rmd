@@ -1,0 +1,7 @@
+# One Continuous and One Categorical
+
+## Basic plots
+
+## Plots with one stratification variable
+
+## Plots with two stratification variables

@@ -1,3 +1,47 @@
 # Two Categorical Variables
 
-Cross-references make it easier for your readers to find and link to elements in your book.
+The dbRUSPClinical application generates a different set of plots when the two variables selected by the user are categorical. Let us examine these plots in this chapter.
+
+## Basic plots
+
+When the user selects two categorical variables for variable one and variable two, and do not select any variables for stratification variable one and stratification variable two as below,
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Categorical-Options.png")
+```
+
+The application generates one bar plot and one counts plot.
+
+Barplot:
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Categorical-Basic-Barplot.png")
+```
+
+Countsplot:
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Categorical-Basic-Countsplot.png")
+```
+
+It is clear that the plots are showing sample sizes. When the plots are generated, the users are given an option to switch between sample sizes and sample proportions. On the side panel, the user can select an appropriate radio button to see either the sample sizes or the sample proportions. See the below image.
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/SampleSize-SampleProportions.png")
+```
+
+When the user switches the option to Sample proportion, the bar plot and the counts plot shown above are transformed to show sample proportions.
+
+Barplot(proportions):
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Categorical-Basic-Barplot-Proportions.png")
+```
+
+Countsplot(proportions):
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Categorical-Basic-Countsplot-Proportions.png")
+```
+
+Now that we have seen the basic plots, let us see how the plots change when the user selects stratification variables.
+
+## Plots with one stratification variable
+
+## Plots with two stratification variables
