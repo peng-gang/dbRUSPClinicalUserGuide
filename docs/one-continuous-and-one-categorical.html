@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Hari Naga Sai Kiran Suryadevara" />
 
 
-<meta name="date" content="2023-08-04" />
+<meta name="date" content="2023-08-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -37,7 +37,7 @@ set in the _output.yml file.</p>" />
   
   
 <link rel="prev" href="two-categorical-variables.html"/>
-<link rel="next" href="references.html"/>
+<link rel="next" href="error-messages.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -106,6 +106,13 @@ set in the _output.yml file.</p>" />
 <li class="chapter" data-level="4.2" data-path="one-continuous-and-one-categorical.html"><a href="one-continuous-and-one-categorical.html#plots-with-one-stratification-variable-1"><i class="fa fa-check"></i><b>4.2</b> Plots with one stratification variable</a></li>
 <li class="chapter" data-level="4.3" data-path="one-continuous-and-one-categorical.html"><a href="one-continuous-and-one-categorical.html#plots-with-two-stratification-variables-1"><i class="fa fa-check"></i><b>4.3</b> Plots with two stratification variables</a></li>
 </ul></li>
+<li class="chapter" data-level="5" data-path="error-messages.html"><a href="error-messages.html"><i class="fa fa-check"></i><b>5</b> Error Messages</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="error-messages.html"><a href="error-messages.html#inappropriate-variables-selected"><i class="fa fa-check"></i><b>5.1</b> Inappropriate variables selected</a></li>
+<li class="chapter" data-level="5.2" data-path="error-messages.html"><a href="error-messages.html#same-variables"><i class="fa fa-check"></i><b>5.2</b> Same variables</a></li>
+<li class="chapter" data-level="5.3" data-path="error-messages.html"><a href="error-messages.html#same-stratification-variables"><i class="fa fa-check"></i><b>5.3</b> Same stratification variables</a></li>
+<li class="chapter" data-level="5.4" data-path="error-messages.html"><a href="error-messages.html#similar-variables-error"><i class="fa fa-check"></i><b>5.4</b> Similar variables error</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -129,14 +136,29 @@ set in the _output.yml file.</p>" />
             <section class="normal" id="section-">
 <div id="one-continuous-and-one-categorical" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> One Continuous and One Categorical<a href="one-continuous-and-one-categorical.html#one-continuous-and-one-categorical" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The appropriate plots for depicting relationship between one continuous variable and one categorical variable are, box plot and violin plot. The dbRUSPClinial application employs a violin plot with an embedded box plot to depict the relationship between one continuous variable and one categorical variable.</p>
 <div id="basic-plots-1" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Basic plots<a href="one-continuous-and-one-categorical.html#basic-plots-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let us examine the basic plots that are shown, whenver the user selects a continuous variable and a categorical variable. For example, if a user selects Birth Weight(Group) as variable one and Gestational age(Weeks) as variable two, the following plot is shown by the application.</p>
+<p><img src="pictures/Violin-Box-Basic.png" width="1244" /></p>
+<p>Here, a continuous variable - Gestational age(Weeks) is selected as variable two and the categorical variable - Birth Weight (Group) is selected as variable one. It is always convenient to select a continuous variable as variable two and categorical variable as variable one as in this case, the violins and the boxes in the plot are shown clearly in a vertical fashion. If the user selects otherwise, then the violins and the boxes are shown in horizontal fashion, making the plot clumsy and congested.</p>
 </div>
 <div id="plots-with-one-stratification-variable-1" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Plots with one stratification variable<a href="one-continuous-and-one-categorical.html#plots-with-one-stratification-variable-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the previous section, we have seen a basic plot showing relationship between a continuous variable and a categorical variable. Let us now see, what kind of plots are shown, when a user selects one stratification variable, i.e., either stratification variable one or stratification variable two. For instance, if the user selects Sex as the stratification variable, Then separate plots are shown for each sex with different colors as below.</p>
+<p><img src="pictures/Violin-Box-One-Str.png" width="1244" /></p>
 </div>
 <div id="plots-with-two-stratification-variables-1" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Plots with two stratification variables<a href="one-continuous-and-one-categorical.html#plots-with-two-stratification-variables-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If the user selects both the stratification variables, then the application shows one basic plot, one plot each for both the stratification variables where the data is shown separately for each category of the corresponding stratification variable and two plots with each plot depicting the data that is grouped using both the stratification variables. For example, let’s say that the user selects stratification variables Sex and Ethnicity(Major). Then the application shows the following plots along with the basic plot and the plot for grouping data by Sex as shown in the previous section.</p>
+<p>Plot showing the data by grouping it based on the variable Ethnicity(Major)
+<img src="pictures/Violin-Box-Two-Str.png" width="1244" /></p>
+<p>Two more plots are shown, where in one plot the data is separated by one stratification variable and each separated data set is shown in a different grid and in each grid the data is further grouped by the other stratification variable. In the other plot, the stratification variables are swapped for data separation and grouping. For the selected stratification variables Sex and Ethnicity(Major), these two plots would like the following.</p>
+<p>Data separated by Ethnicity(Major) and grouped by Sex:
+<img src="pictures/Violin-Box-One-Facet.png" width="1244" /></p>
+<p>Data separated by Sex and grouped by Ethnicity(Major):
+<img src="pictures/Violin-Box-Two-Facet.png" width="1244" /></p>
+<p>It can be seen that the grouped categories are shown in different colors.</p>
 
 </div>
 </div>
@@ -146,7 +168,7 @@ set in the _output.yml file.</p>" />
         </div>
       </div>
 <a href="two-categorical-variables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="error-messages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

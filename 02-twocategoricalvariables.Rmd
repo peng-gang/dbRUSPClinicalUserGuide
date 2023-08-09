@@ -44,4 +44,39 @@ Now that we have seen the basic plots, let us see how the plots change when the 
 
 ## Plots with one stratification variable
 
+When the user selects only one stratification variabe, i.e., either stratification variable one or stratification variable two, along with the variable one and variable two, the basic plots as seen in the previous section would be generated, and along with them, two more plots are shown. One counts plot where the counts are shown separately for each category of the selected stratification variable and one bar plot with inbuilt distinct plots for each category of the selected stratification variable. For example, if the user selects Sex as the stratification variable, the following two plots are shown along with the basic plots.
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Counts-Plot-One-Str.png")
+```
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Bar-Plot-One-Str.png")
+```
+
+When the user selects sample proportions instead of sample size, the above plots would be transformed as below.
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Counts-Plot-One-Str-Prop.png")
+```
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Bar-Plot-One-Str-Prop.png")
+```
+
+In the Counts plot, when the user selects the sample proportions option, the proportions are grouped by the variables and are shown separately for each variable. For example, in the above counts plot, the User has selected Gestational Age(Group) and Birth Weight(Group). We can see that two separate plots are shown for each gender. In the plot where the data points are grouped by Gestational Age(Group), the proportions are shown separately, for each of its categories. This is same with the other variable Birth Weight(Group).
+
+
 ## Plots with two stratification variables
+
+If the user selects two stratification variables, say Sex and Ethnicity(Major), then the application generates the plots shown in previous section for both the selected stratification variables. This means that, one more set of Counts plot and the Bar plot are generated for the stratification variable Ethnicity(Major).
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Counts-Plot-Two-Str.png")
+```
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Bar-Plot-Two-Str.png")
+```
+
+The plots shown above depict sample sizes. The user always has an option to change the view to sample proportions. However, generating proportion plots might take time, depending upon the stratification variables the user selects.

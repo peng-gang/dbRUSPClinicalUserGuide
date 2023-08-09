@@ -14,3 +14,8 @@ one-continuous-and-one-categorical
 basic-plots-1
 plots-with-one-stratification-variable-1
 plots-with-two-stratification-variables-1
+error-messages
+inappropriate-variables-selected
+same-variables
+same-stratification-variables
+similar-variables-error

@@ -1,0 +1,47 @@
+# Error Messages
+
+The application shows different kinds of error messages when the user makes inappropriate selections. Let us decipher the meaning of different error messages.
+
+## Inappropriate variables selected
+
+It is mandatory for the user to select variable one and variable two for the application to show the relationship between the two variables. So, the user must select these two variables. If the user does not select any one variable or both the variables, the following error message is shown.
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Inappropriate-Variables.png")
+```
+
+It must be noted that it is not mandatory for the user to select stratification variables. These variables can be left to blank, i.e., "Select an option".
+
+## Same variables
+
+The variable one and variable two shall always be different. If at all the user selects same variables, the following error message is displayed.
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Same-Variables-Error.png")
+```
+
+## Same stratification variables
+
+The stratification variable one and stratification variable two shall always be different. If at all the user selects same stratification variables, the following error message is displayed.
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Same-StrVariables-Error.png")
+```
+
+
+
+## Similar variables  error
+
+The data contains certain continuous variables and the continuous data of these variables is categorized into groups to form new variables which are categorical in nature. For example, Gestational age(Weeks) is a continuous variable. The data of this variable is transformed into categories and is stored under a new variable Gestational age(Group). Therefore, it does not make sense to select Gestational age(Weeks) as a variable and Gestational age(Group) as a stratification variable or vice versa, as these variables are similar. If the user does select these or such sort of variables, then the application returns the following error message.
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Similar-Error.png")
+```
+
+Also, it is not appropriate to select two similar variables. For example, a user cannot select Gestational age(Weeks) as variable one and Gestational age(Group) as variable two or vice versa. If done so, the following error message is displayed.
+
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Similar-Variables-Error.png")
+```
+

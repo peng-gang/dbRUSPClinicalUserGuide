@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>dbRUSPClinical - User Guide</title>
+  <title>Chapter 5 Error Messages | dbRUSPClinical - User Guide</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="dbRUSPClinical - User Guide" />
+  <meta property="og:title" content="Chapter 5 Error Messages | dbRUSPClinical - User Guide" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="dbRUSPClinical - User Guide" />
+  <meta name="twitter:title" content="Chapter 5 Error Messages | dbRUSPClinical - User Guide" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -36,8 +36,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="two-continuous-variables.html"/>
+<link rel="prev" href="one-continuous-and-one-categorical.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -134,23 +134,31 @@ set in the _output.yml file.</p>" />
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">dbRUSPClinical - User Guide</h1>
-<p class="author"><em>Hari Naga Sai Kiran Suryadevara</em></p>
-<p class="date"><em>2023-08-08</em></p>
+<div id="error-messages" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Error Messages<a href="error-messages.html#error-messages" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The application shows different kinds of error messages when the user makes inappropriate selections. Let us decipher the meaning of different error messages.</p>
+<div id="inappropriate-variables-selected" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Inappropriate variables selected<a href="error-messages.html#inappropriate-variables-selected" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It is mandatory for the user to select variable one and variable two for the application to show the relationship between the two variables. So, the user must select these two variables. If the user does not select any one variable or both the variables, the following error message is shown.</p>
+<p><img src="pictures/Inappropriate-Variables.png" width="405" /></p>
+<p>It must be noted that it is not mandatory for the user to select stratification variables. These variables can be left to blank, i.e., “Select an option”.</p>
 </div>
-<div id="about" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> About<a href="index.html#about" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>dbRUSPClinical is a web application that is built using R shiny. The objective of this application is to allow the user to visualize the newborn clinical data. This application allows the user to find the relation between any two variables of the newborn clinical dataset.</p>
-<div id="usage" class="section level2 hasAnchor" number="1.1">
-<h2><span class="header-section-number">1.1</span> Usage<a href="index.html#usage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The dbRUSPClinical application has two pages. One is the About page, which clearly explains the need of the dbRUSPClinical web application. The other page is the correlation page, which allows the user to select the variables for correlation.</p>
+<div id="same-variables" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Same variables<a href="error-messages.html#same-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The variable one and variable two shall always be different. If at all the user selects same variables, the following error message is displayed.</p>
+<p><img src="pictures/Same-Variables-Error.png" width="559" /></p>
 </div>
-<div id="correlation" class="section level2 hasAnchor" number="1.2">
-<h2><span class="header-section-number">1.2</span> Correlation<a href="index.html#correlation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Here is a glimpse of the correlation page.</p>
-<p><img src="pictures/Correlation-intro.png" width="950" /></p>
-<p>By default, two continuous variables, Gestational age (weeks) on X axis and Birth Weight (g) on Y axis are preselected when the application starts running. This can be seen from the figure above that Gestational age (weeks) is selected as variable one and Birth Weight (g) is selected as variable two. There are other fields in the page such as the stratification variable one and stratification variable two. These two variables allow the user to select categorical variables. This allows the data to be divided into different groups based on the unique values of these categorical variables and these grouped data points are shown separately in the plots. This is shown clearly later in this document. For now, only the variable one and variable two are selected. The other options are check boxes that allow the user to modify the plots to show or hide the data points, to change the scale for X and Y axis, and to include or exclude the confidence interval. All these options are pertaining to the plots generated for two continuous variables. So, by default the correlation page of the dbRUSPClinical application will show you the options relevant for plots between two continuous variables. These options will vary if other types of variable combinations are selected. Let us explore the plot results of each variable combination in the next chapters.</p>
+<div id="same-stratification-variables" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Same stratification variables<a href="error-messages.html#same-stratification-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The stratification variable one and stratification variable two shall always be different. If at all the user selects same stratification variables, the following error message is displayed.</p>
+<p><img src="pictures/Same-StrVariables-Error.png" width="395" /></p>
+</div>
+<div id="similar-variables-error" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Similar variables error<a href="error-messages.html#similar-variables-error" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The data contains certain continuous variables and the continuous data of these variables is categorized into groups to form new variables which are categorical in nature. For example, Gestational age(Weeks) is a continuous variable. The data of this variable is transformed into categories and is stored under a new variable Gestational age(Group). Therefore, it does not make sense to select Gestational age(Weeks) as a variable and Gestational age(Group) as a stratification variable or vice versa, as these variables are similar. If the user does select these or such sort of variables, then the application returns the following error message.</p>
+<p><img src="pictures/Similar-Error.png" width="649" /></p>
+<p>Also, it is not appropriate to select two similar variables. For example, a user cannot select Gestational age(Weeks) as variable one and Gestational age(Group) as variable two or vice versa. If done so, the following error message is displayed.</p>
+<p><img src="pictures/Similar-Variables-Error.png" width="471" /></p>
 
 </div>
 </div>
@@ -159,8 +167,8 @@ set in the _output.yml file.</p>" />
           </div>
         </div>
       </div>
-
-<a href="two-continuous-variables.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="one-continuous-and-one-categorical.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -191,7 +199,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/index.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-error.Rmd",
 "text": "Edit"
 },
 "history": {

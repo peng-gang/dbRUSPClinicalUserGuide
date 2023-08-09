@@ -1,7 +1,47 @@
 # One Continuous and One Categorical
 
+The appropriate plots for depicting relationship between one continuous variable and one categorical variable are, box plot and violin plot. The dbRUSPClinial application employs a violin plot with an embedded box plot to depict the relationship between one continuous variable and one categorical variable.
+
 ## Basic plots
+
+Let us examine the basic plots that are shown, whenver the user selects a continuous variable and a categorical variable. For example, if a user selects Birth Weight(Group) as variable one and Gestational age(Weeks) as variable two, the following plot is shown by the application.
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Violin-Box-Basic.png")
+```
+
+Here, a continuous variable - Gestational age(Weeks) is selected as variable two and the categorical variable - Birth Weight (Group) is selected as variable one. It is always convenient to select a continuous variable as variable two and categorical variable as variable one as in this case, the violins and the boxes in the plot are shown clearly in a vertical fashion. If the user selects otherwise, then the violins and the boxes are shown in horizontal fashion, making the plot clumsy and congested.
 
 ## Plots with one stratification variable
 
+In the previous section, we have seen a basic plot showing relationship between a continuous variable and a categorical variable. Let us now see, what kind of plots are shown, when a user selects one stratification variable, i.e., either stratification variable one or stratification variable two. For instance, if the user selects Sex as the stratification variable, Then separate plots are shown for each sex with different colors as below.
+
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Violin-Box-One-Str.png")
+```
+
+
+
 ## Plots with two stratification variables
+
+If the user selects both the stratification variables, then the application shows one basic plot, one plot each for both the stratification variables where the data is shown separately for each category of the corresponding stratification variable and two plots with each plot depicting the data that is grouped using both the stratification variables. For example, let's say that the user selects stratification variables Sex and Ethnicity(Major). Then the application shows the following plots along with the basic plot and the plot for grouping data by Sex as shown in the previous section.
+
+Plot showing the data by grouping it based on the variable Ethnicity(Major)
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Violin-Box-Two-Str.png")
+```
+
+Two more plots are shown, where in one plot the data is separated by one stratification variable and each separated data set is shown in a different grid and in each grid the data is further grouped by the other stratification variable. In the other plot, the stratification variables are swapped for data separation and grouping. For the selected stratification variables Sex and Ethnicity(Major), these two plots would like the following.
+
+Data separated by Ethnicity(Major) and grouped by Sex:
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Violin-Box-One-Facet.png")
+```
+
+
+Data separated by Sex and grouped by Ethnicity(Major):
+```{r, echo=FALSE}
+knitr::include_graphics("~/dbRUSPClinicalUserGuide/pictures/Violin-Box-Two-Facet.png")
+```
+
+It can be seen that the grouped categories are shown in different colors.
