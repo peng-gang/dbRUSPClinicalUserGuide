@@ -1,13 +1,9 @@
 Welcome! 
 
-This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). 
+This is the documentation about the dbRUSPClinical application. Please go through the documentation before using the application.
 
-This template provides a skeleton file structure that you can edit to create your book. 
+The documentation is available at https://peng-gang.github.io/dbRUSPClinicalUserGuide/.
 
-The contents inside the .Rmd files provide some pointers to help you get started, but feel free to also delete the content in each file and start fresh.
+The application code is available in Github at https://github.com/peng-gang/dbRUSPClinical.
 
-Additional resources:
-
-The **bookdown** book: https://bookdown.org/yihui/bookdown/
-
-The **bookdown** package reference site: https://pkgs.rstudio.com/bookdown
+The application is available at .
